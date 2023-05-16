@@ -1,6 +1,7 @@
 import { companyInfo } from "@/database/database";
-import styles from "./styles.module.scss"
+import styles from "./styles.module.scss";
 import { Inter } from "next/font/google";
+import '@/scss/main.scss';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,17 +17,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <header>
+      <body>
+      <header className={styles.container} id="home">
         <div>{companyInfo.name}</div>
-        <nav>
-          <a href="">Home</a>
-          <a href=""></a>About<a href="">Services</a>
-          <a href="">Pages</a>
-          <a href="">Contact</a>
-        </nav>
-        <button>Get Started</button>
+        <div className={styles.navigation}>
+          <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#pages">Pages</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <button>Get Started</button>
+        </div>
       </header>
-      <body className={inter.className}>{children}</body>
+      <main className={inter.className}>{children}</main>
+      </body>
     </html>
   );
 }

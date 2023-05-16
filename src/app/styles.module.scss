@@ -1,4 +1,12 @@
-
-.main{
-    
+.container {
+  display: flex;
+  justify-content: space-around;
+  .navigation {
+    display: flex;
+    gap: 1rem;
+    nav {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
 }
