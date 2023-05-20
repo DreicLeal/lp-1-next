@@ -2,6 +2,7 @@
 
 :root {
   font-size: 60%;
+  font-family: 'Inter', sans-serif;
 }
 
 @media (min-width: 700px) {
@@ -42,6 +43,7 @@ strong {
 
 button {
   cursor: pointer;
+  border: none;
 }
 
 a {

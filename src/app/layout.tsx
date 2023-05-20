@@ -1,7 +1,9 @@
+"use client"
 import { companyInfo } from "@/database/database";
 import styles from "./styles.module.scss";
 import { Inter } from "next/font/google";
 import '@/scss/main.scss';
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,18 +17,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [currentSection, setCurrentSection] = useState("")
+  const sections = ["Home","About", "Services", "Pages", "Contact"]
   return (
     <html lang="en">
       <body>
       <header className={styles.container} id="home">
-        <div>{companyInfo.name}</div>
+        <div className={styles.companyName}>{companyInfo.name}</div>
         <div className={styles.navigation}>
           <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#pages">Pages</a>
-            <a href="#contact">Contact</a>
+            {sections.map((section) => <a className={currentSection === section? styles.current:""} onClick={()=> setCurrentSection(section)} key={section}>{section}</a>)}
           </nav>
           <button>Get Started</button>
         </div>
