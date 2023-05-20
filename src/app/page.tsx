@@ -1,10 +1,9 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import styles from "./styles.module.scss"
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      
-    </main>
+    <section className={styles.main}>
+      <h2>testando</h2>
+    </section>
   )
 }
