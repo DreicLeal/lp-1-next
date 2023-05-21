@@ -2,6 +2,7 @@
 import Image from "next/image";
 import trace from "../../public/trace.png";
 import circles from "../../public/circles.svg";
+import aboutUs from "../../public/aboutUs.png";
 import styles from "./styles.module.scss";
 import Button from "@/components/button/Button";
 import { companyInfo, services } from "@/database/database";
@@ -85,6 +86,14 @@ export default function Home() {
               </li>
             ))}
           </ul>
+        </div>
+        <div className={styles.aboutUsImgContainer}>
+        <Image width="350"src={aboutUs} alt="About Us"/>
+        <Image
+            className={styles.circles}
+            src={circles}
+            alt="decorativeCircles"
+          />
         </div>
       </section>
     </>
