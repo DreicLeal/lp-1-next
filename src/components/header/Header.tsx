@@ -2,11 +2,14 @@
 import styles from "./styles.module.scss";
 import { companyInfo } from "@/database/database";
 import { useState } from "react";
+import Button from "../button/Button";
 
 const Header = () => {
   const [currentSection, setCurrentSection] = useState("");
   const sections = ["Home", "About", "Services", "Pages", "Contact"];
   return (
+    <div className={styles.headerWrapper}>
+        
     <header className={styles.container} id="home">
       <div className={styles.companyName}>{companyInfo.name}</div>
       <div className={styles.navigation}>
@@ -21,9 +24,10 @@ const Header = () => {
             </a>
           ))}
         </nav>
-        <button>Get Started</button>
+        <Button />
       </div>
     </header>
+      </div>
   );
 };
 export default Header;

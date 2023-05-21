@@ -1,0 +1,42 @@
+@use "../../scss/abstracts/" as *;
+.headerWrapper {
+  background-color: $color-grey-5;
+  .container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    padding: 0.5rem 0;
+    justify-content: space-between;
+    align-items: center;
+    .companyName {
+      font-size: 2.8rem;
+      color: $color-brand-1;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        margin-left: 2.5rem;
+        transition: 0.5s;
+        color: $color-grey-3;
+        font-size: 1.6rem;
+        font-weight: 500;
+        &:hover {
+          color: $color-brand-1;
+        }
+      }
+      .current {
+        color: $color-brand-1;
+      }
+    }
+    .navigation {
+      display: flex;
+      gap: 1rem;
+      nav {
+        display: flex;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
