@@ -1,20 +1,11 @@
-export interface IInsights {
-    id: number;
-    name: string;
-    number: string;
-}
+import businessStrategy from "../../public/businessStrategy.png"
+import SEOStrategy from "../../public/SEOStrategy.png"
+import uxui from "../../public/UXUIDesign.png"
+import app from "../../public/appDevelopment.png"
+import back from "../../public/backEnd.png"
+import web from "../../public/webDevelopment.png"
+import { IService, IUser } from "@/interfaces"
 
-export interface IService {
-    id: number;
-    name: string;
-    description: string;
-  }
-  
-  export interface IUser {
-    name: string;
-    role: string;
-    insights: IInsights[]
-  }
   
   export const companyInfo: IUser = {
     name: "Software House",
@@ -42,32 +33,38 @@ export interface IService {
   export const services: IService[] = [
     {
       id: 1,
+      image: businessStrategy,
       name: "Business Strategy",
       description:
         "A business strategy is a powerful tool for helping you reach your goals, defining the methods and tactics.",
     },
     {
       id: 2,
+      image: uxui,
       name: "UX/UI design",
       description: "UX/UI design involves creating visually appealing and user-friendly interfaces for digital products.",
     },
     {
       id: 3,
+      image: app,
       name: "App development",
       description: "App development focuses on creating mobile applications for various platforms and devices.",
     },
     {
       id: 4,
-      name: "Websites development",
+      image: web,
+      name: "Web development",
       description: "Website development involves designing and building responsive websites with compelling user experiences.",
     },
     {
       id: 5,
-      name: "Database Development",
+      image: back,
+      name: "Data Development",
       description: "Database development entails designing and managing structured data storage for efficient data retrieval and management.",
     },
     {
       id: 6,
+      image: SEOStrategy,
       name: "SEO strategy",
       description: "SEO strategy involves optimizing websites and content to improve search engine visibility and organic traffic.",
     },

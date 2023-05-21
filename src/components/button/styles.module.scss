@@ -1,0 +1,13 @@
+@use "../../scss/abstracts/" as *;
+
+.button {
+    width: 15.4rem;
+    height: 5.4rem;
+    color: $color-white;
+    background-color: $color-brand-1;
+    border-radius: 0.6rem;
+    transition: 0.5s;
+    &:hover {
+      background-color: $color-brand-2;
+    }
+  }
