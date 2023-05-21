@@ -1,9 +1,6 @@
-"use client"
-import { companyInfo } from "@/database/database";
-import styles from "./styles.module.scss";
 import { Inter } from "next/font/google";
-import '@/scss/main.scss';
-import { useState } from "react";
+import "@/scss/main.scss";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,21 +14,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [currentSection, setCurrentSection] = useState("")
-  const sections = ["Home","About", "Services", "Pages", "Contact"]
   return (
     <html lang="en">
       <body>
-      <header className={styles.container} id="home">
-        <div className={styles.companyName}>{companyInfo.name}</div>
-        <div className={styles.navigation}>
-          <nav>
-            {sections.map((section) => <a className={currentSection === section? styles.current:""} onClick={()=> setCurrentSection(section)} key={section}>{section}</a>)}
-          </nav>
-          <button>Get Started</button>
-        </div>
-      </header>
-      <main className={inter.className}>{children}</main>
+        <Header />
+        <main className={inter.className}>{children}</main>
       </body>
     </html>
   );
