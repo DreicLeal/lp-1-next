@@ -5,6 +5,7 @@ import circles from "../../public/circles.svg";
 import styles from "./styles.module.scss";
 import Button from "@/components/button/Button";
 import { services } from "@/database/database";
+import ServiceCard from "@/components/serviceCard/serviceCard";
 export default function Home() {
   return (
     <>
@@ -49,6 +50,9 @@ export default function Home() {
         <Image className={styles.circles}src={circles} alt="decorativeCircles" />
       </div>
     </section>
+    <ul className={styles.services}>
+      {services.map((service)=> <ServiceCard key={service.id} service={service}/>)}
+    </ul>
     </>
   );
 }

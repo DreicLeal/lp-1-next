@@ -53,13 +53,13 @@ import { IService, IUser } from "@/interfaces"
     {
       id: 4,
       image: web,
-      name: "Websites development",
+      name: "Web development",
       description: "Website development involves designing and building responsive websites with compelling user experiences.",
     },
     {
       id: 5,
       image: back,
-      name: "Database Development",
+      name: "Data Development",
       description: "Database development entails designing and managing structured data storage for efficient data retrieval and management.",
     },
     {
