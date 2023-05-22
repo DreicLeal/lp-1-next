@@ -88,13 +88,36 @@ export default function Home() {
           </ul>
         </div>
         <div className={styles.aboutUsImgContainer}>
-        <Image width="350"src={aboutUs} alt="About Us"/>
-        <Image
+          <Image width="350" src={aboutUs} alt="About Us" />
+          <Image
             className={styles.circles}
             src={circles}
             alt="decorativeCircles"
           />
         </div>
+      </section>
+      <section className={styles.ourTeam}>
+        <div className={styles.headWrapper}>
+          <Image src={trace} alt="trace" className={styles.trace} />{" "}
+          <span className={styles.greeting}>Our Team</span>
+          <h2>Our Team</h2>
+        </div>
+        <ul className={styles.teamContainer}>
+          {companyInfo.people.map((member) => (
+            <li key={member.id}>
+              <Image
+                src={member.image}
+                width="204"
+                height="180"
+                alt={member.name}
+              />
+              <div className={styles.employeeInfo}>
+                <p>{member.name}</p>
+                <p>{member.role}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </section>
     </>
   );
