@@ -119,6 +119,25 @@ export default function Home() {
           ))}
         </ul>
       </section>
+      <section className={styles.testimonials}>
+        <div className={styles.headWrapper}>
+          <Image src={trace} alt="trace" className={styles.trace} />{" "}
+          <span className={styles.greeting}>Testimonials</span>
+          <h2>Customers Talk About Us</h2>
+        </div>
+        <p>
+          Customer support represents the resources within your company that
+          provide technical assistance to consumers after they purchase a
+          product or service.
+        </p>
+        <div className={styles.carrousselWrapper}>
+          <button>{`<`}</button>
+          <ul className={styles.carroussel}>
+            
+          </ul>
+          <button>{`>`}</button>
+        </div>
+      </section>
     </>
   );
 }
