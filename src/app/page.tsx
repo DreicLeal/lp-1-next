@@ -5,7 +5,7 @@ import circles from "../../public/circles.svg";
 import aboutUs from "../../public/aboutUs.png";
 import styles from "./styles.module.scss";
 import Button from "@/components/button/Button";
-import { companyInfo, services } from "@/database/database";
+import { companyInfo, services, testimonials } from "@/database/database";
 import ServiceCard from "@/components/serviceCard/serviceCard";
 import Link from "next/link";
 export default function Home() {
@@ -133,7 +133,23 @@ export default function Home() {
         <div className={styles.carrousselWrapper}>
           <button>{`<`}</button>
           <ul className={styles.carroussel}>
-            
+            {testimonials.map((testimonial) => (
+              <li key={testimonial.id} className={styles.depoiment}>
+                <p>{testimonial.testimonial}</p>
+                <div>
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    width="50"
+                    height="50"
+                  />
+                  <div>
+                    <p>{testimonial.name}</p>
+                    <p>{testimonial.from}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
           </ul>
           <button>{`>`}</button>
         </div>

@@ -188,4 +188,22 @@
 }
 .testimonials{
   background-color: $color-brand-3;
+  width: 100vw;
+  .carrousselWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .carroussel{
+      display: flex;
+      gap: 1rem;
+      width: 60%;
+      overflow-x: auto;
+      li{
+        background-color: $color-white;
+        img{
+          border-radius: 50%;
+        }
+      }
+    }
+  }
 }

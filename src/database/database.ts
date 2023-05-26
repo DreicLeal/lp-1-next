@@ -143,3 +143,54 @@ export const services: IService[] = [
       "SEO strategy involves optimizing websites and content to improve search engine visibility and organic traffic.",
   },
 ];
+
+export const testimonials = [
+  {
+    id: 1,
+    image: member1,
+    testimonial:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nam sequi atque quod ex vitae repudiandae accusamus sint quam et nemo recusandae omnis doloremque quaerat non, commodi veritatis quisquam neque.",
+    name: "Mahbubur Rahman",
+    from: "Manchester, Softia, UK",
+  },
+  {
+    id: 2,
+    image: member2,
+    testimonial:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nam sequi atque quod ex vitae repudiandae accusamus sint quam et nemo recusandae omnis doloremque quaerat non, commodi veritatis quisquam neque.",
+    name: "Mahbubur Rahman",
+    from: "London, Softia, UK",
+  },
+  {
+    id: 3,
+    image: member3,
+    testimonial:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nam sequi atque quod ex vitae repudiandae accusamus sint quam et nemo recusandae omnis doloremque quaerat non, commodi veritatis quisquam neque.",
+    name: "Mahbubur Rahman",
+    from: "Owener, Softia, UK",
+  },
+  {
+    id: 4,
+    image: member4,
+    testimonial:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nam sequi atque quod ex vitae repudiandae accusamus sint quam et nemo recusandae omnis doloremque quaerat non, commodi veritatis quisquam neque.",
+    name: "Mahbubur Rahman",
+    from: "Porto, Softia, PT",
+  },
+  {
+    id: 5,
+    image: member1,
+    testimonial:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nam sequi atque quod ex vitae repudiandae accusamus sint quam et nemo recusandae omnis doloremque quaerat non, commodi veritatis quisquam neque.",
+    name: "Mahbubur Rahman",
+    from: "Lisbon, Softia, PT",
+  },
+  {
+    id: 6,
+    image: member2,
+    testimonial:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima nam sequi atque quod ex vitae repudiandae accusamus sint quam et nemo recusandae omnis doloremque quaerat non, commodi veritatis quisquam neque.",
+    name: "Mahbubur Rahman",
+    from: "Sao Paulo, Softia, BR",
+  },
+];
