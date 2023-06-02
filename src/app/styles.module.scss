@@ -137,7 +137,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .headWrapper{
+  .headWrapper {
     margin: 8rem 0 3rem 0;
   }
   .greeting {
@@ -169,16 +169,16 @@
           border: 1px solid $color-brand-1;
         }
       }
-      .employeeInfo{
+      .employeeInfo {
         display: flex;
         flex-direction: column;
-        gap: .5rem;
+        gap: 0.5rem;
         padding: 1rem;
-        p:nth-child(1){
+        p:nth-child(1) {
           font-size: 1.6rem;
           font-weight: 500;
         }
-        p:nth-child(2){
+        p:nth-child(2) {
           font-size: 1.4rem;
           font-weight: 500;
         }
@@ -186,21 +186,25 @@
     }
   }
 }
-.testimonials{
+.testimonials {
   background-color: $color-brand-3;
   width: 100vw;
-  .carrousselWrapper{
+  .carrousselWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    .carroussel{
+    cursor: grab;
+    overflow: hidden;
+    max-width: 650px;
+    margin: 0 auto;
+    .carroussel {
       display: flex;
       gap: 1rem;
-      width: 60%;
-      overflow-x: auto;
-      li{
+      // width: 100%;
+      .depoiment {
+        width: 300px;
         background-color: $color-white;
-        img{
+        img {
           border-radius: 50%;
         }
       }

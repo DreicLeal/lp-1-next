@@ -1,13 +1,16 @@
 // import styles from "./styles.module.scss"
+
 import Image from "next/image";
 import trace from "../../public/trace.png";
 import circles from "../../public/circles.svg";
 import aboutUs from "../../public/aboutUs.png";
 import styles from "./styles.module.scss";
 import Button from "@/components/button/Button";
-import { companyInfo, services, testimonials } from "@/database/database";
+import { companyInfo, services } from "@/database/database";
 import ServiceCard from "@/components/serviceCard/serviceCard";
 import Link from "next/link";
+import Testimonial from "@/components/testimonials/Testimonial";
+
 export default function Home() {
   return (
     <>
@@ -119,41 +122,7 @@ export default function Home() {
           ))}
         </ul>
       </section>
-      <section className={styles.testimonials}>
-        <div className={styles.headWrapper}>
-          <Image src={trace} alt="trace" className={styles.trace} />{" "}
-          <span className={styles.greeting}>Testimonials</span>
-          <h2>Customers Talk About Us</h2>
-        </div>
-        <p>
-          Customer support represents the resources within your company that
-          provide technical assistance to consumers after they purchase a
-          product or service.
-        </p>
-        <div className={styles.carrousselWrapper}>
-          <button>{`<`}</button>
-          <ul className={styles.carroussel}>
-            {testimonials.map((testimonial) => (
-              <li key={testimonial.id} className={styles.depoiment}>
-                <p>{testimonial.testimonial}</p>
-                <div>
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    width="50"
-                    height="50"
-                  />
-                  <div>
-                    <p>{testimonial.name}</p>
-                    <p>{testimonial.from}</p>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-          <button>{`>`}</button>
-        </div>
-      </section>
+      <Testimonial />
     </>
   );
 }
