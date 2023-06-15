@@ -1,16 +1,26 @@
 "use client";
 import Image from "next/image";
 import trace from "../../../public/trace.png";
-import styles from "../../app/styles.module.scss"
+import styles from "./styles.module.scss";
 import { testimonials } from "@/database/database";
 import { motion } from "framer-motion";
 import { useRef, RefObject, useEffect, useState } from "react";
+
 
 export default function Testimonial() {
   const carousel: RefObject<HTMLDivElement> = useRef(null);
   const [width, setWidth] = useState<number>(0);
   useEffect(() => {
-    setWidth(carousel.current?.scrollWidth! - carousel.current?.offsetWidth!);
+    const updateWidth = () => {
+      setWidth(carousel.current?.scrollWidth! - carousel.current?.offsetWidth!);
+    };
+
+    window.addEventListener('resize', updateWidth);
+    updateWidth();
+
+    return () => {
+      window.removeEventListener('resize', updateWidth);
+    };
   }, []);
   return (
     <>
@@ -33,7 +43,7 @@ export default function Testimonial() {
           <motion.ul
             className={styles.carroussel}
             drag="x"
-            dragConstraints={{ right: 0, left: -width }}
+            dragConstraints={{ left: -width, right: width }}
           >
             {testimonials.map((testimonial) => (
               <motion.li key={testimonial.id} className={styles.depoiment}>

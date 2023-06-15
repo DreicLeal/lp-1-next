@@ -1,0 +1,26 @@
+@use "../../scss/abstracts/" as *;
+
+.testimonials {
+    background-color: $color-brand-3;
+    width: 100vw;
+    .carrousselWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: grab;
+      overflow: hidden;
+      max-width: 650px;
+      margin: 0 auto;
+      .carroussel {
+        display: flex;
+        gap: 1rem;
+        .depoiment {
+          width: 300px;
+          background-color: $color-white;
+          img {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
