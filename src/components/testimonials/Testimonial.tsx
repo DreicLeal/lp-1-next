@@ -6,7 +6,6 @@ import { testimonials } from "@/database/database";
 import { motion } from "framer-motion";
 import { useRef, RefObject, useEffect, useState } from "react";
 
-
 export default function Testimonial() {
   const carousel: RefObject<HTMLDivElement> = useRef(null);
   const [width, setWidth] = useState<number>(0);
@@ -15,11 +14,11 @@ export default function Testimonial() {
       setWidth(carousel.current?.scrollWidth! - carousel.current?.offsetWidth!);
     };
 
-    window.addEventListener('resize', updateWidth);
+    window.addEventListener("resize", updateWidth);
     updateWidth();
 
     return () => {
-      window.removeEventListener('resize', updateWidth);
+      window.removeEventListener("resize", updateWidth);
     };
   }, []);
   return (
@@ -28,9 +27,9 @@ export default function Testimonial() {
         <div className={styles.headWrapper}>
           <Image src={trace} alt="trace" className={styles.trace} />{" "}
           <span className={styles.greeting}>Testimonials</span>
-          <h2>Customers Talk About Us</h2>
         </div>
-        <p>
+        <h2>Customers Talk About Us</h2>
+        <p className={styles.value}>
           Customer support represents the resources within your company that
           provide technical assistance to consumers after they purchase a
           product or service.
@@ -48,7 +47,7 @@ export default function Testimonial() {
             {testimonials.map((testimonial) => (
               <motion.li key={testimonial.id} className={styles.depoiment}>
                 <p>{testimonial.testimonial}</p>
-                <div>
+                <div className={styles.info}>
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
