@@ -1,5 +1,3 @@
-// import styles from "./styles.module.scss"
-
 import Image from "next/image";
 import trace from "../../public/trace.png";
 import circles from "../../public/circles.svg";
@@ -10,6 +8,7 @@ import { companyInfo, services } from "@/database/database";
 import ServiceCard from "@/components/serviceCard/serviceCard";
 import Link from "next/link";
 import Testimonial from "@/components/testimonials/Testimonial";
+import Price from "@/components/price/Price";
 
 export default function Home() {
   return (
@@ -123,6 +122,7 @@ export default function Home() {
         </ul>
       </section>
       <Testimonial />
+      <Price/>
     </>
   );
 }
