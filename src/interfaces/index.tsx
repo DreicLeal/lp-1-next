@@ -25,3 +25,9 @@ export interface IPeople {
     insights: IInsights[]
     people: IPeople[]
   }
+
+  export interface IPriceTable{
+    name:string;
+    advantage:string;
+    price: number;
+  }
