@@ -1,0 +1,58 @@
+@use "../../scss/abstracts/" as *;
+.footerStyle {
+  background-color: $color-grey-7;
+  .footerWrapper {
+    display: flex;
+    gap: 6rem;
+    color: $color-brand-3;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5rem;
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+    .nameInfo {
+      width: 33rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      h1 {
+        color: $color-brand-1;
+        font-size: 2.8rem;
+        font-weight: 500;
+      }
+      p {
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+      .network {
+        display: flex;
+        gap: 2rem;
+      }
+    }
+    .contact > p {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  .trace {
+    width: 85%;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .rights {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0 4rem 0;
+    color: $color-grey-3;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
