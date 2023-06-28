@@ -9,18 +9,14 @@ import ServiceCard from "@/components/serviceCard/serviceCard";
 import Link from "next/link";
 import Testimonial from "@/components/testimonials/Testimonial";
 import Price from "@/components/price/Price";
+import Trace from "@/components/trace/Trace";
 
 export default function Home() {
   return (
     <>
       <section className={styles.welcomeSection}>
         <div className={styles.info}>
-          <div>
-            <Image src={trace} alt="trace" className={styles.trace} />{" "}
-            <span className={styles.greeting}>
-              Welcome to <span className={styles.companyName}>Our Company</span>
-            </span>
-          </div>
+          <Trace section="Welcome to" company="Our Company" />
           <h2>Impact the World by Taking Action</h2>
           <p>
             Objectively foster extensible scenarios and business innovation.
@@ -65,10 +61,7 @@ export default function Home() {
       </ul>
       <section className={styles.aboutUs}>
         <div className={styles.info}>
-          <div>
-            <Image src={trace} alt="trace" className={styles.trace} />{" "}
-            <span className={styles.greeting}>About us</span>
-          </div>
+          <Trace section="About us" />
           <h2>Insights About Our Company</h2>
           <p>
             Let our experts prepare a free home analysis for you! Just fill out
@@ -100,8 +93,7 @@ export default function Home() {
       </section>
       <section className={styles.ourTeam}>
         <div className={styles.headWrapper}>
-          <Image src={trace} alt="trace" className={styles.trace} />{" "}
-          <span className={styles.greeting}>Our Team</span>
+          <Trace section="Our Team" />
           <h2>Our Team</h2>
         </div>
         <ul className={styles.teamContainer}>
@@ -122,7 +114,7 @@ export default function Home() {
         </ul>
       </section>
       <Testimonial />
-      <Price/>
+      <Price />
     </>
   );
 }

@@ -5,6 +5,7 @@ import styles from "./styles.module.scss";
 import { testimonials } from "@/database/database";
 import { motion } from "framer-motion";
 import { useRef, RefObject, useEffect, useState } from "react";
+import Trace from "../trace/Trace";
 
 export default function Testimonial() {
   const carousel: RefObject<HTMLDivElement> = useRef(null);
@@ -24,10 +25,7 @@ export default function Testimonial() {
   return (
     <>
       <section className={styles.testimonials}>
-        <div className={styles.headWrapper}>
-          <Image src={trace} alt="trace" className={styles.trace} />{" "}
-          <span className={styles.greeting}>Testimonials</span>
-        </div>
+        <Trace section="Testimonial" />
         <h2>Customers Talk About Us</h2>
         <p className={styles.value}>
           Customer support represents the resources within your company that
