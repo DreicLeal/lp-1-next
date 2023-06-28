@@ -16,8 +16,11 @@
     margin-top: 5rem;
     display: flex;
     & > :nth-child(2) {
-    transform: scale(1.2);
-    margin: 0 5rem;
+      span {
+        color: $color-brand-3;
+      }
+      transform: scale(1.2);
+      margin: 0 5rem;
       color: $color-brand-3;
       background-color: $color-brand-1;
     }

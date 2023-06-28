@@ -5,6 +5,7 @@ import styles from "./styles.module.scss";
 import { Switch } from "@mui/material";
 import { useState } from "react";
 import PriceCard from "./priceCard/PriceCard";
+import Trace from "../trace/Trace";
 
 export default function Price() {
   const [basicPrice, setBasicPrice] = useState(29.52);
@@ -24,9 +25,8 @@ export default function Price() {
   return (
     <section className={styles.priceTable}>
       <div className={styles.headWrapper}>
-        <Image src={trace} alt="trace" className={styles.trace} />{" "}
-        <span className={styles.greeting}>pricing</span>
-      <h2>The best pricing plan</h2>
+        <Trace section="Pricing" />
+        <h2>The best pricing plan</h2>
       </div>
       <div className={styles.priceChoice}>
         <p>Monthly</p>
