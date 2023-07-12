@@ -29,6 +29,10 @@
   justify-content: space-between;
   gap: 5rem;
 
+  @media (max-width: 860px) {
+    flex-direction: column-reverse;
+  }
+
   .imagesContainer {
     position: relative;
     height: fit-content;

@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import trace from "../../../public/trace.png";
 import styles from "./styles.module.scss";
 import { Switch } from "@mui/material";
 import { useState } from "react";

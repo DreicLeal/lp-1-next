@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import trace from "../../../public/trace.png";
 import styles from "./styles.module.scss";
 import { testimonials } from "@/database/database";
 import { motion } from "framer-motion";
