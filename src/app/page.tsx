@@ -1,5 +1,4 @@
 import Image from "next/image";
-import trace from "../../public/trace.png";
 import circles from "../../public/circles.svg";
 import aboutUs from "../../public/aboutUs.png";
 import styles from "./styles.module.scss";
