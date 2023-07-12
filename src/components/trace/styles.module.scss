@@ -1,0 +1,13 @@
+@use "../../scss/abstracts/" as *;
+
+.trace {
+  width: 60px;
+  height: 15px;
+}
+.greeting {
+  font-weight: 500;
+  font-size: 1.6rem;
+  .companyName {
+    color: $color-brand-1;
+  }
+}

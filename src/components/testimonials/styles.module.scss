@@ -1,0 +1,60 @@
+@use "../../scss/abstracts/" as *;
+
+.testimonials {
+  padding: 0 23rem;
+  .headWrapper {
+    display: flex;
+    align-items: center;
+    margin: 3rem 0 2rem 0;
+    .trace {
+      width: 60px;
+      height: 15px;
+    }
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 2rem 0;
+  }
+  .value{
+    margin: 3rem 0;
+    width: 50%;
+  }
+  background-color: $color-brand-3;
+  width: 100vw;
+  height: 50vw;
+  .carrousselWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    overflow: hidden;
+    max-width: 950px;
+    margin: 0 auto;
+    .carroussel {
+      display: flex;
+      gap: 1.5rem;
+      .depoiment {
+        width: 350px;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        color: $color-grey-6;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 2rem;
+        height: 25rem;
+        background-color: $color-white;
+        img {
+          border-radius: 50%;
+        }
+        .info {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}

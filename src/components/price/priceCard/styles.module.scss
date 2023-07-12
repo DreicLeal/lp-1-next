@@ -1,0 +1,43 @@
+@use "../../../scss/abstracts/" as *;
+.priceCard {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  box-shadow: 0px 12px 24px rgba(80, 80, 80, 0.07);
+  border-radius: 1rem;
+  .title {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+  .advantage {
+    color: $color-grey-6;
+  }
+  .priceWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align-last: center;
+    margin: 2rem 0;
+    .price {
+      font-size: 1.6rem;
+      font-weight: 600;
+      span {
+        font-size: 3.5rem;
+      }
+    }
+  }
+  .pack {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  button {
+    align-self: center;
+    padding: 1rem;
+    width: fit-content;
+    border-radius: 0.5rem;
+    color: $color-brand-3;
+    background-color: $color-grey-2;
+  }
+}
